@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{6222E515-C367-235B-4F92-B23243C57A93}</ProjectGuid>
+    <ProjectGuid>{0A679014-8FF4-1044-EFBD-73B080E225E1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -47,10 +47,16 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\My Assets\Scripts\Coin.cs" />
+     <Compile Include="Assets\My Assets\Scripts\EnvironmentBlockSpawner.cs" />
      <Compile Include="Assets\My Assets\Scripts\LevelConfig.cs" />
+     <Compile Include="Assets\My Assets\Scripts\MidwayTrigger.cs" />
+     <Compile Include="Assets\My Assets\Scripts\Personagem.cs" />
      <Compile Include="Assets\My Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\My Assets\Scripts\PlayerScore.cs" />
+     <Compile Include="Assets\My Assets\Scripts\StepArea.cs" />
+     <Compile Include="Assets\My Assets\Scripts\StepFall.cs" />
      <Compile Include="Assets\My Assets\Scripts\StepSpawner.cs" />
+     <Compile Include="Assets\My Assets\Scripts\Timer.cs" />
      <Compile Include="Assets\My Assets\Scripts\WaterScript.cs" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
@@ -85,7 +91,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{CF7B288C-512E-7F15-25FD-A8A178E42ACE}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{40C4BCE5-1E44-CDBA-860A-49955CC85B8F}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -14,7 +14,6 @@ public class StepSpawner : MonoBehaviour {
 		for (int i = 0; i < 50; i++) 	
 		{
 			float chance = Random.Range (0f,1f);
-			Debug.Log (chance);
 			if(i > 5 && chance < 0.2)
 			{
 				IsLowStep = !IsLowStep;

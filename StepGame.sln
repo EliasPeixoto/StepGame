@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StepGame", "Assembly-CSharp-firstpass.csproj", "{40C4BCE5-1E44-CDBA-860A-49955CC85B8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StepGame", "Assembly-CSharp.csproj", "{0A679014-8FF4-1044-EFBD-73B080E225E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StepGame", "Assembly-CSharp-Editor-firstpass.csproj", "{525678FF-26DE-F3E1-83A0-2084C723B623}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{40C4BCE5-1E44-CDBA-860A-49955CC85B8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40C4BCE5-1E44-CDBA-860A-49955CC85B8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40C4BCE5-1E44-CDBA-860A-49955CC85B8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40C4BCE5-1E44-CDBA-860A-49955CC85B8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A679014-8FF4-1044-EFBD-73B080E225E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A679014-8FF4-1044-EFBD-73B080E225E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A679014-8FF4-1044-EFBD-73B080E225E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A679014-8FF4-1044-EFBD-73B080E225E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{525678FF-26DE-F3E1-83A0-2084C723B623}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{525678FF-26DE-F3E1-83A0-2084C723B623}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{525678FF-26DE-F3E1-83A0-2084C723B623}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{525678FF-26DE-F3E1-83A0-2084C723B623}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

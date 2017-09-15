@@ -7,6 +7,8 @@ public class StepArea : MonoBehaviour {
 	void OnTriggerEnter (Collider other)
 	{
 		if(other.CompareTag("Player"))
-				other.GetComponent<Animator>().SetBool("CanStep",true);
+        {
+			other.GetComponent<Animator>().SetBool("CanStep",true);
+        }
 	}
 }
