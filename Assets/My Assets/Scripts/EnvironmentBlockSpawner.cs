@@ -14,7 +14,7 @@ public class EnvironmentBlockSpawner : MonoBehaviour
 			Destroy (block [0]);
 		}
 		block[0] = block[1];
-		block[1] = Instantiate(EnvironmentBlock,new Vector3(obj.transform.position.x,obj.transform.position.y - 5,obj.transform.position.z + 25),Quaternion.identity);
+		block[1] = Instantiate(EnvironmentBlock,new Vector3(obj.transform.position.x,obj.transform.position.y - 5,obj.transform.position.z),Quaternion.identity);
 			
 	}
 }

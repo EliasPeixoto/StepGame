@@ -5,17 +5,24 @@ using UnityEngine;
 public class LevelConfig 
 {
 
-	private static int stepNumber = 10;
+	private static int stepQuantity = 1;
 
-	public static int StepNumber
+	public static int StepQuantity
 	{
-		get{ return stepNumber; }
+		get{ return stepQuantity; }
 		set
 		{
 			if (value >= 0)
 			{
-				stepNumber = value;
+				stepQuantity = value;
 			}
 		}
 	}
+
+    public static void CouseFinished ()
+    {
+        stepQuantity++;
+        StepSpawner.stepQuantity = 0;
+    }
+
 }
