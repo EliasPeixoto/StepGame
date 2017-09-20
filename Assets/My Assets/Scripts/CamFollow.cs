@@ -11,8 +11,11 @@ public class CamFollow : MonoBehaviour {
 
     void FixedUpdate ()
     {
-        transform.LookAt(player.transform.position);
-        newPosition = new Vector3(player.transform.position.x, player.transform.position.y + height, player.transform.position.z - distance);
-        transform.position = newPosition;
+        if (player != null)
+        {
+            transform.LookAt(player.transform.position);
+            newPosition = new Vector3(player.transform.position.x, player.transform.position.y + height, player.transform.position.z - distance);
+            transform.position = newPosition;
+        }
     }
 }

@@ -6,9 +6,8 @@ public class Coin : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.CompareTag ("Player"))
-			PlayerScore.AddScore ();
-		Debug.Log (PlayerScore.Score);
+        if (other.CompareTag("Player"))
+            PlayerScore.AddScore();
 		Destroy (this.gameObject);
 	}
 }

@@ -16,8 +16,8 @@ public class WaterScript : MonoBehaviour {
 	}
 	IEnumerator Restart (GameObject player)
 	{
+        Destroy (player);
 		yield return new WaitForSeconds(5f);
-		Destroy (player);
 		SceneManager.LoadScene (0);
 	}
 					

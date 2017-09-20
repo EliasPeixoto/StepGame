@@ -7,15 +7,20 @@ public class PlayerController : MonoBehaviour {
     public float speed = 1;
     public float jumpforce = 1;
     public bool canStep = false;
+    public bool isDead = false;
 
-
+    void Start ()
+    {
+        GetComponent<Animator>().speed = speed * 10f;
+    }
 
     void FixedUpdate () 
     {
 
 
         if (Input.GetButton ("Jump") && GetComponent<Rigidbody> ().velocity.y == 0 && canStep) {
-            GetComponent<Rigidbody> ().AddForce (Vector3.up * jumpforce);
+            GetComponent<Animator>().Play("Step");
+            StartCoroutine(StepDelay());
             canStep = false;
         } else 
         {
@@ -23,5 +28,11 @@ public class PlayerController : MonoBehaviour {
                 gameObject.transform.Translate (Vector3.forward * speed);
         }
 
+    }
+
+    IEnumerator StepDelay ()
+    {
+        yield return new WaitForSeconds(0.6f);
+        GetComponent<Rigidbody>().AddForce(Vector3.up * jumpforce);
     }
 }

@@ -13,11 +13,8 @@ public class MidwayTrigger : MonoBehaviour {
             if (StepSpawner.stepQuantity < LevelConfig.StepQuantity)
                 GameObject.FindWithTag("BlockSpawner").GetComponent<EnvironmentBlockSpawner>().InstantiateBlock(this.gameObject);
             else
-            {
-                other.GetComponent<PlayerController>().enabled = false;
-                LevelConfig.CouseFinished();
-                SceneManager.LoadScene(0);
-            }
+                GameObject.FindWithTag("BlockSpawner").GetComponent<EnvironmentBlockSpawner>().InstantiateFinish(this.gameObject);
+            Debug.Log(StepSpawner.stepQuantity + " " + LevelConfig.StepQuantity);   
         }
     }
 }

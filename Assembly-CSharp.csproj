@@ -50,6 +50,7 @@
      <Compile Include="Assets\My Assets\Scripts\Coin.cs" />
      <Compile Include="Assets\My Assets\Scripts\EndTrigger.cs" />
      <Compile Include="Assets\My Assets\Scripts\EnvironmentBlockSpawner.cs" />
+     <Compile Include="Assets\My Assets\Scripts\Finishline.cs" />
      <Compile Include="Assets\My Assets\Scripts\LevelConfig.cs" />
      <Compile Include="Assets\My Assets\Scripts\MidwayTrigger.cs" />
      <Compile Include="Assets\My Assets\Scripts\PlayerController.cs" />
@@ -58,6 +59,7 @@
      <Compile Include="Assets\My Assets\Scripts\StepFall.cs" />
      <Compile Include="Assets\My Assets\Scripts\StepSpawner.cs" />
      <Compile Include="Assets\My Assets\Scripts\Timer.cs" />
+     <Compile Include="Assets\My Assets\Scripts\UIElements.cs" />
      <Compile Include="Assets\My Assets\Scripts\WaterScript.cs" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
