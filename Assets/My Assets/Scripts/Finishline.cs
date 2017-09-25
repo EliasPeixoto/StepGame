@@ -14,11 +14,10 @@ public class Finishline : MonoBehaviour {
     IEnumerator ControledEnd (GameObject player)
     {   
         yield return new WaitForSeconds(2f);
-        player.GetComponent<PlayerController>().enabled = false;
-        player.GetComponent<Animator>().SetBool("CanStep", true);
-        LevelConfig.CouseFinished();
-        Debug.Log("Couse Finished");
+        player.GetComponent<PlayerController>().enabled = false;//Disable player controller at the end of the course.
+        player.GetComponent<Animator>().SetBool("CanStep", true);//It Makes the idle animation start.
+        LevelConfig.CouseFinished();//See LevelConfig script
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);//It Loads the current scene.
     }
 }

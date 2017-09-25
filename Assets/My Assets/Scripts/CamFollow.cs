@@ -9,6 +9,8 @@ public class CamFollow : MonoBehaviour {
     public float height = 1.2f;
     public float distance = 1.8f;
 
+    //Simple camera follow script
+
     void FixedUpdate ()
     {
         if (player != null)

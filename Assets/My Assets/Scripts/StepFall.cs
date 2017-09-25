@@ -9,13 +9,13 @@ public class StepFall : MonoBehaviour
 	void OnCollisionEnter (Collision other)
 	{
 		if (other.transform.CompareTag ("Player")) 
-			StartCoroutine(Timer(time));
+			StartCoroutine(Timer(time));//Starts the coroutine.
 	}
 
 	IEnumerator Timer (float t)
 	{
 		yield return new WaitForSeconds (t);
-		gameObject.GetComponent<Rigidbody> ().isKinematic = false;
+		gameObject.GetComponent<Rigidbody> ().isKinematic = false;//Makes the step influenceable by physics therefore the step falls.
 		
 	}
 

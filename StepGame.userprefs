@@ -1,20 +1,20 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\My Assets\Scripts\Finishline.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\My Assets\Scripts\UIElements.cs">
     <Files>
-      <File FileName="Assets\My Assets\Scripts\EnvironmentBlockSpawner.cs" Line="17" Column="23" />
-      <File FileName="Assets\My Assets\Scripts\MidwayTrigger.cs" Line="17" Column="81" />
-      <File FileName="Assets\My Assets\Scripts\StepSpawner.cs" Line="46" Column="96" />
-      <File FileName="Assets\My Assets\Scripts\StepArea.cs" Line="9" Column="38" />
-      <File FileName="Assets\My Assets\Scripts\CamFollow.cs" Line="19" Column="10" />
-      <File FileName="Assets\My Assets\Scripts\PlayerController.cs" Line="35" Column="44" />
-      <File FileName="Assets\My Assets\Scripts\LevelConfig.cs" Line="8" Column="37" />
-      <File FileName="Assets\My Assets\Scripts\UIElements.cs" Line="41" Column="68" />
-      <File FileName="Assets\My Assets\Scripts\StepFall.cs" Line="1" Column="1" />
-      <File FileName="Assets\My Assets\Scripts\WaterScript.cs" Line="19" Column="26" />
+      <File FileName="Assets\My Assets\Scripts\EnvironmentBlockSpawner.cs" Line="24" Column="187" />
+      <File FileName="Assets\My Assets\Scripts\MidwayTrigger.cs" Line="16" Column="240" />
+      <File FileName="Assets\My Assets\Scripts\StepSpawner.cs" Line="44" Column="84" />
+      <File FileName="Assets\My Assets\Scripts\StepArea.cs" Line="11" Column="99" />
+      <File FileName="Assets\My Assets\Scripts\CamFollow.cs" Line="12" Column="34" />
+      <File FileName="Assets\My Assets\Scripts\PlayerController.cs" Line="37" Column="98" />
+      <File FileName="Assets\My Assets\Scripts\LevelConfig.cs" Line="32" Column="6" />
+      <File FileName="Assets\My Assets\Scripts\UIElements.cs" Line="68" Column="1" />
+      <File FileName="Assets\My Assets\Scripts\StepFall.cs" Line="18" Column="128" />
+      <File FileName="Assets\My Assets\Scripts\WaterScript.cs" Line="21" Column="11" />
       <File FileName="Assets\My Assets\Scripts\EndTrigger.cs" Line="15" Column="16" />
       <File FileName="Assets\My Assets\Scripts\Coin.cs" Line="10" Column="36" />
-      <File FileName="Assets\My Assets\Scripts\Finishline.cs" Line="18" Column="66" />
+      <File FileName="Assets\My Assets\Scripts\Finishline.cs" Line="16" Column="45" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

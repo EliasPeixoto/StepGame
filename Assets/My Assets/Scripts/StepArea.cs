@@ -8,7 +8,7 @@ public class StepArea : MonoBehaviour {
 	{
         if(other.CompareTag("Player"))
         {
-            other.GetComponent<PlayerController>().canStep = true;
+            other.GetComponent<PlayerController>().canStep = true;//Authorizes the player to step.
         }
 	}
 }
