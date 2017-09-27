@@ -11,11 +11,12 @@ public class StepSpawner : MonoBehaviour {
 	bool IsLowStep = true; // Determines whether the high step or the low step is instantiated.
     int lowStepCount = 0; // Count the number of low steps to prevent a high quantity of high steps in small distances.
     public static int stepQuantity = 0; // Count the number of high steps instantiated in the course.
+    public int distance = 50;
 
 	// Use this for initialization
 	void Start () 
 	{
-		for (int i = 0; i < 50; i++) 	
+		for (int i = 0; i < distance; i++) 	
 		{
 			float chance = Random.Range (0f,1f); // Chance to instantiate the high step.
             if (lowStepCount >= 5 && chance < 0.2)//It must have at least 5 low steps instantiated in order to instnatiate a high step.
@@ -27,16 +28,19 @@ public class StepSpawner : MonoBehaviour {
             {
                 IsLowStep = true;
             }
+
+            GameObject Step = null;
+
             if (IsLowStep || stepQuantity >= LevelConfig.StepQuantity)//If isLowStep is true or all the high steps were already instantiated, instantiate low steps. 
 			{
-				GameObject Step = GameObject.Instantiate(LowStep,new Vector3 (transform.position.x, transform.position.y, transform.position.z + i),Quaternion.identity);
+				Step = GameObject.Instantiate(LowStep,new Vector3 (transform.position.x, transform.position.y, transform.position.z + i),Quaternion.identity);
 				Step.transform.SetParent (transform);
                 lowStepCount++;
 			} else 
 			{
                 if (stepQuantity < LevelConfig.StepQuantity)//if the number of high steps are still lower than the maximum set for this level.
                 {
-                    GameObject Step = GameObject.Instantiate(HighStep, new Vector3(transform.position.x, transform.position.y, transform.position.z + i), Quaternion.identity);
+                    Step = GameObject.Instantiate(HighStep, new Vector3(transform.position.x, transform.position.y, transform.position.z + i), Quaternion.identity);
                     Step.transform.SetParent(transform);
                     stepQuantity++;
                 }

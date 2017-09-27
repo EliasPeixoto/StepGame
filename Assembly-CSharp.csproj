@@ -46,6 +46,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\My Assets\Scripts\AlternativePlayerController.cs" />
+     <Compile Include="Assets\My Assets\Scripts\AlternativeStepArea.cs" />
+     <Compile Include="Assets\My Assets\Scripts\AlternativeStepDestroyer.cs" />
+     <Compile Include="Assets\My Assets\Scripts\AlternativeStepSpawner.cs" />
      <Compile Include="Assets\My Assets\Scripts\CamFollow.cs" />
      <Compile Include="Assets\My Assets\Scripts\Coin.cs" />
      <Compile Include="Assets\My Assets\Scripts\EndTrigger.cs" />
@@ -57,6 +61,7 @@
      <Compile Include="Assets\My Assets\Scripts\PlayerScore.cs" />
      <Compile Include="Assets\My Assets\Scripts\StepArea.cs" />
      <Compile Include="Assets\My Assets\Scripts\StepFall.cs" />
+     <Compile Include="Assets\My Assets\Scripts\StepMovement.cs" />
      <Compile Include="Assets\My Assets\Scripts\StepSpawner.cs" />
      <Compile Include="Assets\My Assets\Scripts\Timer.cs" />
      <Compile Include="Assets\My Assets\Scripts\UIElements.cs" />

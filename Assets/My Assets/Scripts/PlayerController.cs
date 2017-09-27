@@ -18,14 +18,14 @@ public class PlayerController : MonoBehaviour {
     {
 
 
-        if (Input.GetButton("Jump") && GetComponent<Rigidbody>().velocity.y == 0 && canStep) //if the character is not jumping or falling and canStep is true.
+        if (Input.GetButton("Jump") && GetComponent<Rigidbody>().velocity.y == 0 && GetComponent<Animator>().GetBool("CanStep")) //if the character is not jumping or falling and canStep is true.
         {
             GetComponent<Animator>().Play("Step");//Plays the Step animation.
             StartCoroutine(StepDelay());//Delays the character movement for a better Animation/Movement Sychronization.
-            canStep = false;
+            GetComponent<Animator>().SetBool("CanStep",false);
         }         else 
         {
-            if (GetComponent<Rigidbody>().velocity.y <= 0 && !canStep)//if the character is  jumping or falling and canStep is false.
+            if (GetComponent<Rigidbody>().velocity.y <= 0 && !GetComponent<Animator>().GetBool("CanStep"))//if the character is  jumping or falling and canStep is false.
                 gameObject.transform.Translate (Vector3.forward * speed);//It Makes the character go forward.
         }
 
