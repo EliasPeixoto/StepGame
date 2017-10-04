@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\My Assets\Scripts\AlternativeFinish.cs" />
      <Compile Include="Assets\My Assets\Scripts\AlternativePlayerController.cs" />
      <Compile Include="Assets\My Assets\Scripts\AlternativeStepArea.cs" />
      <Compile Include="Assets\My Assets\Scripts\AlternativeStepDestroyer.cs" />

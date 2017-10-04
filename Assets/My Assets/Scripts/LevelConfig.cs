@@ -36,6 +36,7 @@ public class LevelConfig
     {
         stepQuantity = stepQuantity + increment;//Increases the maximum number of steps for the next level.
         StepSpawner.stepQuantity = 0;//Resets the number of steps instantated.
+        AlternativeStepSpawner.stepQuantity = 0;
     }
 
 }

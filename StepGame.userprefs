@@ -3,23 +3,24 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\My Assets\Scripts\AlternativeStepSpawner.cs">
     <Files>
       <File FileName="Assets\My Assets\Scripts\EnvironmentBlockSpawner.cs" Line="24" Column="187" />
-      <File FileName="Assets\My Assets\Scripts\MidwayTrigger.cs" Line="16" Column="240" />
+      <File FileName="Assets\My Assets\Scripts\MidwayTrigger.cs" Line="1" Column="1" />
       <File FileName="Assets\My Assets\Scripts\StepSpawner.cs" Line="50" Column="146" />
-      <File FileName="Assets\My Assets\Scripts\StepArea.cs" Line="11" Column="69" />
+      <File FileName="Assets\My Assets\Scripts\StepArea.cs" Line="1" Column="1" />
       <File FileName="Assets\My Assets\Scripts\CamFollow.cs" Line="1" Column="1" />
-      <File FileName="Assets\My Assets\Scripts\PlayerController.cs" Line="28" Column="63" />
-      <File FileName="Assets\My Assets\Scripts\LevelConfig.cs" Line="8" Column="37" />
+      <File FileName="Assets\My Assets\Scripts\PlayerController.cs" Line="1" Column="1" />
+      <File FileName="Assets\My Assets\Scripts\LevelConfig.cs" Line="39" Column="49" />
       <File FileName="Assets\My Assets\Scripts\UIElements.cs" Line="1" Column="1" />
       <File FileName="Assets\My Assets\Scripts\StepFall.cs" Line="1" Column="1" />
       <File FileName="Assets\My Assets\Scripts\WaterScript.cs" Line="1" Column="1" />
       <File FileName="Assets\My Assets\Scripts\EndTrigger.cs" Line="1" Column="1" />
       <File FileName="Assets\My Assets\Scripts\Coin.cs" Line="1" Column="1" />
-      <File FileName="Assets\My Assets\Scripts\Finishline.cs" Line="1" Column="1" />
+      <File FileName="Assets\My Assets\Scripts\Finishline.cs" Line="8" Column="5" />
       <File FileName="Assets\My Assets\Scripts\StepMovement.cs" Line="22" Column="1" />
       <File FileName="Assets\My Assets\Scripts\AlternativeStepArea.cs" Line="12" Column="13" />
       <File FileName="Assets\My Assets\Scripts\AlternativePlayerController.cs" Line="23" Column="98" />
       <File FileName="Assets\My Assets\Scripts\AlternativeStepDestroyer.cs" Line="11" Column="6" />
-      <File FileName="Assets\My Assets\Scripts\AlternativeStepSpawner.cs" Line="54" Column="87" />
+      <File FileName="Assets\My Assets\Scripts\AlternativeFinish.cs" Line="21" Column="41" />
+      <File FileName="Assets\My Assets\Scripts\AlternativeStepSpawner.cs" Line="33" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
