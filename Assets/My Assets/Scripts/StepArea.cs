@@ -8,7 +8,9 @@ public class StepArea : MonoBehaviour {
 	{
         if(other.CompareTag("Player"))
         {
+            Debug.Log("Olha o player");
             other.GetComponent<Animator>().SetBool("CanStep", true);//Authorizes the player to step.
+            other.GetComponent<Animator>().SetBool("Idle", true);
         }
 	}
 }

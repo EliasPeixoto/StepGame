@@ -13,19 +13,20 @@ public class AlternativeStepSpawner : MonoBehaviour {
     bool IsLowStep = true;
     int lowStepCount = 0;
     public static bool doneSpawning = false;
-
+    int coinCount = 4;
+    int sideChance = 0;
     public static int stepQuantity = 0; // Count the number of high steps instantiated in the course.
     public int distance = 50;
 
     // Use this for initialization
-    void Start () 
+    void Start()
     {
-        if(!IsSpawner2)
-           AlternativeStepSpawner1();
+        if (!IsSpawner2)
+            AlternativeStepSpawner1();
     }
 
 
-    void OnTriggerExit (Collider other)
+    void OnTriggerExit(Collider other)
     {
         AlternativeStepSpawner2(other);
     }
@@ -33,11 +34,10 @@ public class AlternativeStepSpawner : MonoBehaviour {
     {
         doneSpawning = false;
         StepMovement.isEnabled = true;
-        Debug.Log(stepQuantity + " " + LevelConfig.StepQuantity);
-        for (int i = 0; i < distance; i++)  
+        for (int i = 0; i < distance; i++)
         {
-            float chance = Random.Range (0f,1f); // Chance to instantiate the high step.
-            if (lowStepCount >= 5 && chance < 0.2)//It must have at least 5 low steps instantiated in order to instnatiate a high step.
+            float chance = Random.Range(0f, 1f); // Chance to instantiate the high step.
+            if (lowStepCount >= 10 && chance < 0.2)//It must have at least 5 low steps instantiated in order to instnatiate a high step.
             {
                 IsLowStep = false;
                 lowStepCount = 0;
@@ -51,10 +51,10 @@ public class AlternativeStepSpawner : MonoBehaviour {
 
             if (IsLowStep && stepQuantity < LevelConfig.StepQuantity)//If isLowStep is true or all the high steps were already instantiated, instantiate low steps. 
             {
-                Step = GameObject.Instantiate(LowStep,new Vector3 (transform.position.x, transform.position.y, transform.position.z + i),Quaternion.identity);
-                Step.transform.SetParent (transform);
+                Step = GameObject.Instantiate(LowStep, new Vector3(transform.position.x, transform.position.y, transform.position.z + i), Quaternion.identity);
+                Step.transform.SetParent(transform);
                 lowStepCount++;
-            } else 
+            } else
             {
                 if (stepQuantity < LevelConfig.StepQuantity)//if the number of high steps are still lower than the maximum set for this level.
                 {
@@ -65,11 +65,11 @@ public class AlternativeStepSpawner : MonoBehaviour {
                 else
                 {
                     doneSpawning = true;
-                    Instantiate(AlternativeFinish,new Vector3(transform.position.x, transform.position.y, transform.position.z + i), Quaternion.identity);
+                    Instantiate(AlternativeFinish, new Vector3(transform.position.x, transform.position.y, transform.position.z + i), Quaternion.identity);
                     break;
                 }
             }
-            CoinSpawn(i);
+            CoinSpawn(i, IsLowStep);
         }
     }
     void AlternativeStepSpawner2(Collider other)
@@ -77,7 +77,7 @@ public class AlternativeStepSpawner : MonoBehaviour {
         if (other.CompareTag("Step") && stepQuantity < LevelConfig.StepQuantity && !doneSpawning && IsSpawner2)
         {
             float chance = Random.Range(0f, 1f); // Chance to instantiate the high step.
-            if (lowStepCount >= 5 && chance < 0.2)//It must have at least 5 low steps instantiated in order to instnatiate a high step.
+            if (lowStepCount >= 10 && chance < 0.2)//It must have at least 5 low steps instantiated in order to instnatiate a high step.
             {
                 IsLowStep = false;
                 lowStepCount = 0;
@@ -113,15 +113,46 @@ public class AlternativeStepSpawner : MonoBehaviour {
             if (stepQuantity >= LevelConfig.StepQuantity && !doneSpawning)
             {
                 doneSpawning = true;
-                Instantiate(AlternativeFinish,new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+                Instantiate(AlternativeFinish, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
             }
         }
     }
-    void CoinSpawn(int i)
+    void CoinSpawn(int i, bool isLowStep)
     {
+        float yValue = 0;
+        float xValue = 0;
         float coinChance = Random.Range(0f, 1f);//Chance to instantiate a coin.
+        if (coinCount >= 3)
+        {
+            sideChance = Random.Range(0, 3);
+            coinCount = 0;
+        }
+
         if (coinChance <= 0.35f)
-            Instantiate(Coin, new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z + i), Quaternion.identity);
+        {
+            coinCount++;
+            switch (sideChance)
+            {
+                case 0:
+                    xValue = 0.45f;
+                    yValue = 0.9f;
+                    break;
+                case 1:
+                    xValue = -0.45f;
+                    yValue = 0.9f;
+                    break;
+                case 2:
+                    xValue = 0.45f;
+                    yValue = 1.4f;
+                    break;
+                case 3:
+                    xValue = -0.45f;
+                    yValue = 1.4f;
+                    break;
+            }
+            if (isLowStep)
+                Instantiate(Coin, new Vector3(transform.position.x + xValue, transform.position.y + yValue, transform.position.z + i), Quaternion.identity);
+        }
     }
 
 }

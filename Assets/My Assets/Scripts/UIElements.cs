@@ -45,12 +45,13 @@ public class UIElements : MonoBehaviour {
 
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        LevelConfig.RestartCourse();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void PlayGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
     public void ActivateConfigPanel()
     {

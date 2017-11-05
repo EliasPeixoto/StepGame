@@ -9,7 +9,7 @@ public class AlternativeStepArea : MonoBehaviour {
         if(other.CompareTag("Player"))
         {
             StepMovement.isEnabled = false;
-            other.GetComponent<Animator>().SetBool("CanStep", true);//Authorizes the player to step.
+            other.GetComponent<Animator>().SetBool("Idle", true);//Authorizes the player to step.
         }
     }
 }

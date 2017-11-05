@@ -16,7 +16,8 @@ public class Finishline : MonoBehaviour {
         yield return new WaitForSeconds(2f);
         player.GetComponent<PlayerController>().enabled = false;//Disable player controller at the end of the course.
         player.GetComponent<Animator>().SetBool("CanStep", true);//It Makes the idle animation start.
-        LevelConfig.CouseFinished();//See LevelConfig script
+        player.GetComponent<Animator>().SetBool("Finish", true);
+        LevelConfig.CourseFinished();//See LevelConfig script
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(1);//It Loads the current scene.
     }

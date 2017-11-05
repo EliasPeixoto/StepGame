@@ -16,8 +16,8 @@ public class AlternativeFinish : MonoBehaviour {
         yield return new WaitForSeconds(0.1f);
         StepMovement.isEnabled = false;
         player.GetComponent<AlternativePlayerController>().enabled = false;//Disable player controller at the end of the course.
-        player.GetComponent<Animator>().SetBool("CanStep", true);//It Makes the idle animation start.
-        LevelConfig.CouseFinished();
+        player.GetComponent<Animator>().Play("Idle");
+        LevelConfig.CourseFinished();
         Debug.Log(AlternativeStepSpawner.stepQuantity + " " + LevelConfig.StepQuantity);
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(2);//It Loads the current scene.
